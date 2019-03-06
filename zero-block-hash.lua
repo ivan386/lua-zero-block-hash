@@ -123,7 +123,7 @@ function gen_tth_hashes(hash_count)
 	print("")
 	print("// tth_hashes")
 	for i = 0, hash_count do
-		print("// Hash: "..hash_hex, " Size: "..(1024*2^i));
+		print("// Hash: "..hash_hex, " Size: "..math.floor(1024*2^i));
 		 -- получаем хеш от нуль блока вдвое большего размера
 		hash_hex = tth_root(hash_hex):upper();
 	end
